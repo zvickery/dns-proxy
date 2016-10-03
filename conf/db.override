@@ -1,0 +1,20 @@
+;
+; BIND data file for overridden IPs
+;
+$TTL  86400
+@   IN  SOA ns1 root (
+            2016100201  ; serial
+            3600        ; refresh 1w
+            3600        ; retry 1d
+            3600        ; expiry 4w
+            3600        ; minimum TTL 1d
+            )
+
+; need atleast a nameserver
+    IN  NS  ns1
+; specify nameserver IP address
+ns1 IN  A   PUBLIC_IP
+; provide IP address for domain itself
+@   IN  A   PUBLIC_IP
+; resolve everything with the same IP address as ns1
+*   IN  A   PUBLIC_IP
