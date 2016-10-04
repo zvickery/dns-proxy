@@ -8,12 +8,13 @@ ADD conf/sniproxy.conf /etc/sniproxy.conf
 ADD conf/named.conf.options /etc/bind/named.conf.options
 ADD conf/db.override /etc/bind/db.override
 ADD conf/named.conf.local /etc/bind/named.conf.local
+ADD conf/zones.override /etc/bind/zones.override
 ADD conf/startup.sh /
 
 RUN chmod 775 /startup.sh && \
   mkdir /var/log/named && \
   chown root.bind /var/log/named && \
-  chmod 755 /var/log/named
+  chmod 775 /var/log/named
 
 EXPOSE 53
 EXPOSE 80

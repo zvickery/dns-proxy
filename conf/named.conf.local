@@ -16,7 +16,7 @@ acl "trusted" {
     127.0.0.1;
 };
 
-//include "/etc/bind/zones.override";
+include "/etc/bind/zones.override";
 
 logging {
     channel bind_log {
