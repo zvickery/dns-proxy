@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-DOMAIN=${DOMAIN:-'nhl.com'}
+DOMAIN1=${DOMAIN1:-'nhl.com'}
+DOMAIN2=${DOMAIN2:-'mlb.com'}
+DOMAIN3=${DOMAIN3:-'mlb.tv'}
 CLIENT_IP=${CLIENT_IP:-127.0.0.1}
 LOCAL_IP=${LOCAL_IP:-127.0.0.1}
 PUBLIC_IP=${PUBLIC_IP:-127.0.0.1}

@@ -1,4 +1,14 @@
-zone "DOMAIN." {
+zone "DOMAIN1." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "DOMAIN2." {
+    type master;
+    file "/etc/bind/db.override";
+};
+
+zone "DOMAIN3." {
     type master;
     file "/etc/bind/db.override";
 };
