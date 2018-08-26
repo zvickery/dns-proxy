@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y autotools-dev bind9 cdbs debhelper devscripts dh-autoreconf dpkg-dev fakeroot gettext git libev-dev libpcre3-dev libudns-dev pkg-config
 RUN git clone git://github.com/dlundquist/sniproxy.git
