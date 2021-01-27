@@ -12,3 +12,8 @@ zone "DOMAIN3." {
     type master;
     file "/etc/bind/db.override";
 };
+
+zone "DOMAIN4." {
+    type master;
+    file "/etc/bind/db.override";
+};
