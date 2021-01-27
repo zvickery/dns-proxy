@@ -3,7 +3,7 @@
 DOMAIN1=${DOMAIN1:-'nhl.com'}
 DOMAIN2=${DOMAIN2:-'mlb.com'}
 DOMAIN3=${DOMAIN3:-'mlb.tv'}
-DOMAIN4=${DOMAIN3:-'nhl.tv'}
+DOMAIN4=${DOMAIN4:-'nhl.tv'}
 CLIENT_IP=${CLIENT_IP:-127.0.0.1}
 LOCAL_IP=${LOCAL_IP:-127.0.0.1}
 PUBLIC_IP=${PUBLIC_IP:-127.0.0.1}
@@ -28,4 +28,4 @@ sed -i s/PUBLIC_IP/${PUBLIC_IP}/g /etc/bind/db.override
 
 sed -i s/EXTERNAL_DNS/${EXTERNAL_DNS}/g /etc/bind/named.conf.options
 
-/etc/init.d/bind9 start && /usr/local/sbin/sniproxy -f
+/etc/init.d/named start && /usr/local/sbin/sniproxy -f
