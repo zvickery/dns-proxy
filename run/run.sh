@@ -4,6 +4,12 @@ export CLIENT_IP=127.0.0.1
 export LOCAL_IP=127.0.0.1
 export PUBLIC_IP=127.0.0.1
 
+set -x
+
+sed "s/SRC_IP/$CLIENT_IP/" iptables-zdv > iptables-tmp
+sudo iptables-restore < iptables-tmp
+docker stop $(docker ps -q) || true
+
 docker run \
   -d \
   -p ${LOCAL_IP}:80:80 \

@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y autotools-dev bind9 cdbs debhelper devscripts dh-autoreconf dpkg-dev fakeroot gettext git libev-dev libpcre3-dev libudns-dev pkg-config
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y autotools-dev bind9 cdbs debhelper devscripts dh-autoreconf dnsutils dpkg-dev fakeroot gettext git libev-dev libpcre3-dev libudns-dev pkg-config
 RUN git clone git://github.com/dlundquist/sniproxy.git
 RUN cd /sniproxy && ./autogen.sh && ./configure && make install
 
