@@ -6,6 +6,7 @@ export PUBLIC_IP=127.0.0.1
 
 docker run \
   -d \
+  --restart unless-stopped \
   -p ${LOCAL_IP}:80:80 \
   -p ${LOCAL_IP}:443:443 \
   -p ${LOCAL_IP}:53:53/udp \
