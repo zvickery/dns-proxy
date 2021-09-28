@@ -13,6 +13,7 @@ acl "trusted" {
     LOCAL_IP;
     CLIENT_IP;
     PUBLIC_IP;
+    172.17.0.0/16;
     127.0.0.1;
 };
 
